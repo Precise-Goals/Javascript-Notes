@@ -82,3 +82,12 @@ const num1 = parseFloat(newstr);
 console.log(num1);
 console.log(typeof (num1 + 0.1));
 // NaN error occurs when you dont contain the number into input string for parsing
+
+console.log();
+console.log(parseInt('Lays'));
+console.log(parseInt('#@$*'));
+if((NaN === NaN)){
+    console.log(true);
+} else{
+    console.log(false);
+}
