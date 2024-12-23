@@ -52,3 +52,33 @@ console.log(string);
 console.log(typeof string);
 console.log(typeof (string + " "));
 console.log(typeof String(string));
+
+console.log();
+str = "";
+// false, zero, empty string, null gives non truthy value
+if (str) {
+  console.log("This is a Truthy Value due to non empty string.");
+} else {
+  console.log("This is not a Truthy Value");
+}
+console.log();
+
+/// PARSING INT AND PARSING FLOAT
+// both parse int and pars float are functions Used
+// to convert the string into numbers, but both of them have different
+// use cases
+// parseInt : Used to parse a string and convert it into integer ( whole Number ) and ignores
+//              after the decimal point
+// parseFloat : while parseFloat is used to convert the string into integer without ignoring the decimal part.
+// both functions will try to convert the strings untill the invalid characters are there
+const mystring = "42";
+console.log(typeof mystring);
+const num = parseInt(mystring);
+console.log(num);
+console.log(typeof num);
+console.log();
+const newstr = "45.5";
+const num1 = parseFloat(newstr);
+console.log(num1);
+console.log(typeof (num1 + 0.1));
+// NaN error occurs when you dont contain the number into input string for parsing
