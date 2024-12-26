@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM and BOM</title>
+</head>
+
+<body>
+    <h1>BOM - Browser Object Model</h1>
+    <h1>Navigator</h1>
+    <button class="open" onclick="window.open('https://precisegoals.vercel.app','_blank')">Precise Goals</button>
+    <h1>Javascript History</h1>
+    <button onclick="history.back()" class="back">Back</button>
+    <button onclick="history.forward()" class="forward">Forward</button>
+    <button onclick="history.go(-1)" class="both">Move Forward or Backward</button>
+    <h1>Window Reload stuff</h1>
+    <button onclick="location.reload()">Reload</button>
+    <button onclick="location.replace('https://precisegoals.vercel.app')">Navigate</button>
+    <button onclick="location.assign('https://precisegoals.vercel.app')">Navigate with Assign</button>
+    <ul class="list">
+        <li>MHTCET</li>
+        <li>JEE</li>
+        <li>AIEEE</li>
+        <li>WBJEE</li>
+    </ul>
+</body>
+<script>
+    window.alert("Haanji, Good Morning")
+    // DOM element
+    console.log(document)
+    let parent = document;
+    let head = document.head;
+    let body = document.body;
+    let bodyChild = document.body.childNodes;
+    // child gives everything including comments /texts/ etc 
+    let bodyChildren = document.body.children;
+    // children returns only tags which are present there
+    console.log(parent);
+    console.log(body);
+    console.log(head);
+    console.log(bodyChild);
+    console.log(bodyChildren);
+    // firstChild
+    console.log(body.firstChild);
+    console.log(body.firstElementChild);
+    // lastChild
+    console.log(body.lastChild);
+    console.log(body.lastElementChild);
+    // similarly nextSibling/nextElementSibling, previousSibling/previousElementSibling
+    console.log(...document.getElementsByClassName('open')) // simplified consolation
+    console.log(...document.getElementsByClassName('list')) // simplified consolation
+
+    for(let curr of document.getElementsByClassName('list')){
+        console.log(curr.innerHTML);
+        console.log(curr.innerText);
+    }
+</script>
+
+</html>

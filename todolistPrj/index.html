@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radium - Prototype</title>
+</head>
+
+<body>
+    <div class="home">
+        <h1>Simple Todo List Prototype</h1>
+        <input type="text" id="inputField" placeholder="Add Your Tasks">
+        <button class="btn" onclick="">Add</button>
+        <div class="todoLists"></div>
+    </div>
+    <script>
+        let todoELem = document.getElementById("inputField")
+        let btn = document.querySelector(".btn")
+        let list = document.querySelector(".todoLists")
+        const appendTodo = () => {
+            let pElm = document.createElement("p")
+            pElm.textContent = todoELem.value
+            list.append(pElm)
+            todoELem.value = ""
+        }
+        btn.addEventListener('click', () => {
+            appendTodo();
+        })
+        list.addEventListener("click", (event) => {
+            let currClick = event.target
+            currClick.remove()
+        })
+    </script>
+</body>
+
+</html>
